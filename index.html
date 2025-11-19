@@ -1,48 +1,146 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; -webkit-text-stroke: #000000; min-height: 14.0px}
-    span.s1 {font-kerning: none}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Меню YETI DRINK</title>
+
+  <style>
+
+    /* Подключение шрифта ZingRust */
+    @font-face {
+      font-family: 'ZingRust';
+      src: url('ZingRust.ttf') format('truetype');
+    }
+
+    /* Живой переливающийся градиент */
+    body {
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(90deg, #ff8abf, #ffffff, #ff8abf);
+      background-size: 300% 300%;
+      animation: gradientMove 12s ease infinite;
+      font-family: 'ZingRust', sans-serif;
+      text-align: center;
+      color: #377ceb;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Логотип */
+    .logo {
+      width: 180px;
+      margin-top: 20px;
+    }
+
+    .top-text {
+      font-size: 1.6em;
+      margin: 15px auto;
+      width: 90%;
+      max-width: 700px;
+    }
+
+    /* Контейнер каждой картинки меню */
+    .section {
+      margin: 50px auto;
+      width: 90%;
+      max-width: 750px;
+      position: relative;
+    }
+
+    /* Плашка с текстом */
+    .label {
+      background: #ffffff;
+      color: #377ceb;
+      padding: 18px 22px;
+      border-radius: 15px;
+      font-size: 1.4em;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.20);
+      margin-bottom: 20px;
+    }
+
+    /* Картинки */
+    .menu-img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.30);
+    }
+
+    /* Вращающийся стикер */
+    .sticker {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 120px;
+      z-index: 9999;
+      animation: spin 6s linear infinite;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.25));
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    @media (max-width: 480px) {
+      .sticker { width: 85px; }
+      .label { font-size: 1.1em; }
+      .top-text { font-size: 1.3em; }
+    }
+
   </style>
 </head>
+
 <body>
-<p class="p1"><span class="s1">&lt;!DOCTYPE html&gt;</span></p>
-<p class="p1"><span class="s1">&lt;html lang="ru"&gt;</span></p>
-<p class="p1"><span class="s1">&lt;head&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta charset="UTF-8"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;title&gt;YETI DRINK Меню&lt;/title&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/head&gt;</span></p>
-<p class="p1"><span class="s1">&lt;body style="display:flex;flex-direction:column;align-items:center;gap:20px;margin:20px;"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;h1&gt;Меню YETI DRINK&lt;/h1&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;video width="320" height="240" controls autoplay loop&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;source src="video1.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>Ваш браузер не поддерживает видео.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/video&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;video width="320" height="240" controls autoplay loop&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;source src="video2.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>Ваш браузер не поддерживает видео.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/video&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;video width="320" height="240" controls autoplay loop&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;source src="video3.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>Ваш браузер не поддерживает видео.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/video&gt;</span></p>
-<p class="p2"><span class="s1"></span><br></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;video width="320" height="240" controls autoplay loop&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>&lt;source src="video4.mp4" type="video/mp4"&gt;</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">    </span>Ваш браузер не поддерживает видео.</span></p>
-<p class="p1"><span class="s1"><span class="Apple-converted-space">  </span>&lt;/video&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/body&gt;</span></p>
-<p class="p1"><span class="s1">&lt;/html&gt;</span></p>
+
+  <!-- ЛОГО -->
+  <img src="лого.png" class="logo" alt="Логотип">
+
+  <!-- ОПИСАНИЕ ПОД ЛОГОТИПОМ -->
+  <div class="top-text">
+    Это место для тех, кто живёт в движении, выбирает вкусы, свободу и комьюнити по вайбу.
+  </div>
+
+  <br><br>
+
+  <!-- БЛОК 1 — МЕНЮ НАПИТКОВ -->
+  <div class="section">
+    <div class="label">
+      авторские напитки на основе натурального пюре и чая
+    </div>
+    <img src="меню_напитков.png" class="menu-img" alt="Меню напитков">
+  </div>
+
+  <!-- БЛОК 2 — СЕЗОНКИ -->
+  <div class="section">
+    <div class="label">
+      Сезонные напитки — для самой уютной осени
+    </div>
+    <img src="меню_сезонок.png" class="menu-img" alt="Меню сезонок">
+  </div>
+
+  <!-- БЛОК 3 — ЕДА 1 -->
+  <div class="section">
+    <div class="label">
+      Выбери свой лучший завтрак
+    </div>
+    <img src="еда1.png" class="menu-img" alt="Еда 1">
+  </div>
+
+  <!-- БЛОК 4 — ЕДА 2 -->
+  <div class="section">
+    <div class="label">
+      Выбери свой лучший завтрак
+    </div>
+    <img src="еда2.png" class="menu-img" alt="Еда 2">
+  </div>
+
+  <!-- ВРАЩАЮЩИЙСЯ СТИКЕР -->
+  <img src="sticker.png" class="sticker" alt="sticker">
+
 </body>
 </html>
