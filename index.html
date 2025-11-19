@@ -1,28 +1,28 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Меню YETI DRINK</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Меню</title>
 
+  <!-- Подключаем шрифт -->
   <style>
-
-    /* Подключение шрифта ZingRust */
     @font-face {
-      font-family: 'ZingRust';
-      src: url('ZingRust.ttf') format('truetype');
+      font-family: "ZingRust";
+      src: url("ZingRust.ttf");
     }
 
-    /* Живой переливающийся градиент */
     body {
       margin: 0;
       padding: 0;
+      text-align: center;
+      color: #377ceb;
+      font-family: Arial, Helvetica, sans-serif;
+
+      /* ЖИВОЙ ГРАДИЕНТ */
       background: linear-gradient(90deg, #ff8abf, #ffffff, #ff8abf);
       background-size: 300% 300%;
       animation: gradientMove 12s ease infinite;
-      font-family: 'ZingRust', sans-serif;
-      text-align: center;
-      color: #377ceb;
     }
 
     @keyframes gradientMove {
@@ -31,54 +31,15 @@
       100% { background-position: 0% 50%; }
     }
 
-    /* Логотип */
-    .logo {
-      width: 180px;
-      margin-top: 20px;
-    }
-
-    .top-text {
-      font-size: 1.6em;
-      margin: 15px auto;
-      width: 90%;
-      max-width: 700px;
-    }
-
-    /* Контейнер каждой картинки меню */
-    .section {
-      margin: 50px auto;
-      width: 90%;
-      max-width: 750px;
-      position: relative;
-    }
-
-    /* Плашка с текстом */
-    .label {
-      background: #ffffff;
-      color: #377ceb;
-      padding: 18px 22px;
-      border-radius: 15px;
-      font-size: 1.4em;
-      box-shadow: 0 10px 20px rgba(0,0,0,0.20);
-      margin-bottom: 20px;
-    }
-
-    /* Картинки */
-    .menu-img {
-      width: 100%;
-      border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.30);
-    }
-
-    /* Вращающийся стикер */
+    /* Стикер */
     .sticker {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
-      width: 120px;
-      z-index: 9999;
-      animation: spin 6s linear infinite;
-      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.25));
+      top: 15px;
+      right: 15px;
+      width: 90px;
+      z-index: 1000;
+      filter: drop-shadow(0 8px 12px rgba(0, 0, 0, 0.25));
+      animation: spin 8s linear infinite;
     }
 
     @keyframes spin {
@@ -86,61 +47,108 @@
       to { transform: rotate(360deg); }
     }
 
-    @media (max-width: 480px) {
-      .sticker { width: 85px; }
-      .label { font-size: 1.1em; }
-      .top-text { font-size: 1.3em; }
+    .header {
+      padding: 25px 10px;
     }
 
+    .header img {
+      max-width: 180px;
+      width: 60%;
+    }
+
+    /* Белые плашки */
+    .label {
+      font-family: "ZingRust", sans-serif;
+      background: white;
+      color: #377ceb;
+      font-size: 1.3em;
+      padding: 18px;
+      border-radius: 18px;
+      margin: 25px auto 10px;
+      width: 90%;
+      max-width: 700px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+    }
+
+    .menu-section {
+      margin: 30px auto 40px;
+      width: 90%;
+      max-width: 700px;
+    }
+
+    .menu-image {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+
+    .feedback-link {
+      display: inline-block;
+      margin: 40px auto 60px;
+      background: #ffffff;
+      color: #377ceb;
+      padding: 18px 30px;
+      border-radius: 15px;
+      font-size: 1.2em;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .feedback-link:hover {
+      transform: translateY(-4px) scale(1.03);
+      box-shadow: 0 12px 22px rgba(0,0,0,0.25);
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- ЛОГО -->
-  <img src="лого.png" class="logo" alt="Логотип">
+  <!-- Стикер -->
+  <img src="sticker.png" class="sticker" alt="sticker">
 
-  <!-- ОПИСАНИЕ ПОД ЛОГОТИПОМ -->
-  <div class="top-text">
+  <header class="header">
+    <img src="logo.png" alt="Логотип">
+  </header>
+
+  <!-- Текст под логотипом -->
+  <div class="label" style="margin-top: -10px;">
     Это место для тех, кто живёт в движении, выбирает вкусы, свободу и комьюнити по вайбу.
   </div>
 
-  <br><br>
+  <main>
 
-  <!-- БЛОК 1 — МЕНЮ НАПИТКОВ -->
-  <div class="section">
-    <div class="label">
-      авторские напитки на основе натурального пюре и чая
-    </div>
-    <img src="меню_напитков.png" class="menu-img" alt="Меню напитков">
-  </div>
+    <!-- 1 картинка -->
+    <div class="label">авторские напитки на основе натурального пюре и чая</div>
+    <section class="menu-section">
+      <img src="menu_drinks.png" class="menu-image" alt="Меню напитков">
+    </section>
 
-  <!-- БЛОК 2 — СЕЗОНКИ -->
-  <div class="section">
-    <div class="label">
-      Сезонные напитки — для самой уютной осени
-    </div>
-    <img src="меню_сезонок.png" class="menu-img" alt="Меню сезонок">
-  </div>
+    <!-- 2 картинка -->
+    <div class="label">Сезонные напитки - для самой уютной осени</div>
+    <section class="menu-section">
+      <img src="menu_season.png" class="menu-image" alt="Меню сезонок">
+    </section>
 
-  <!-- БЛОК 3 — ЕДА 1 -->
-  <div class="section">
-    <div class="label">
-      Выбери свой лучший завтрак
-    </div>
-    <img src="еда1.png" class="menu-img" alt="Еда 1">
-  </div>
+    <!-- 3 картинка -->
+    <div class="label">Выбери свой лучший завтрак</div>
+    <section class="menu-section">
+      <img src="food1.png" class="menu-image" alt="Меню еды 1">
+    </section>
 
-  <!-- БЛОК 4 — ЕДА 2 -->
-  <div class="section">
-    <div class="label">
-      Выбери свой лучший завтрак
-    </div>
-    <img src="еда2.png" class="menu-img" alt="Еда 2">
-  </div>
+    <!-- 4 картинка -->
+    <div class="label">Выбери свой лучший завтрак</div>
+    <section class="menu-section">
+      <img src="food2.png" class="menu-image" alt="Меню еды 2">
+    </section>
 
-  <!-- ВРАЩАЮЩИЙСЯ СТИКЕР -->
-  <img src="sticker.png" class="sticker" alt="sticker">
+    <!-- Кнопка -->
+    <a class="feedback-link" href="https://t.me/your_link" target="_blank">
+      Жалобы и предложения
+    </a>
+
+  </main>
 
 </body>
 </html>
